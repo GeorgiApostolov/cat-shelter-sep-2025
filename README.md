@@ -14,7 +14,7 @@ JS BACK END COURSE PROJECT
 - [x] Extract css into separate js files
 - [x] Read home html from file system
 - [x] Read site css from file system
-- [] Add create breed page
+- [x] Add create breed page
 - [] Add create cat page
 - [] Render view generic function
 - [] Render dynamic cats on home page
