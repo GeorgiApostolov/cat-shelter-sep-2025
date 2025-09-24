@@ -8,7 +8,7 @@ JS BACK END COURSE PROJECT
 - [x] Dev script
 - [x] Debugging
 - [x] Add basic http server
-- [] Add resources
+- [x] Add resources
 - [] Show home page
 - [] Add css
 - [] Extract css into separate js files
