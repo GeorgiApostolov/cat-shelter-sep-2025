@@ -7,7 +7,7 @@ JS BACK END COURSE PROJECT
 - [x] Initialize NodeJS Project
 - [x] Dev script
 - [x] Debugging
-- [] Add basic http server
+- [x] Add basic http server
 - [] Add resources
 - [] Show home page
 - [] Add css
