@@ -4,7 +4,7 @@ JS BACK END COURSE PROJECT
 
 ## TODOs
 
-- [] Initialize NodeJS Project
+- [x] Initialize NodeJS Project
 - [] Dev script
 - [] Debugging
 - [] Add basic http server
