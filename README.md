@@ -9,9 +9,9 @@ JS BACK END COURSE PROJECT
 - [x] Debugging
 - [x] Add basic http server
 - [x] Add resources
-- [] Show home page
-- [] Add css
-- [] Extract css into separate js files
+- [x] Show home page
+- [x] Add css
+- [x] Extract css into separate js files
 - [] Read home html from file system
 - [] Read site css from file system
 - [] Add create bread page
