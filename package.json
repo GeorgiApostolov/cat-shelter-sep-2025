@@ -1,0 +1,21 @@
+{
+  "name": "cat-shelter-sep-2025",
+  "version": "1.0.0",
+  "description": "JS BACK END COURSE PROJECT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgiApostolov/cat-shelter-sep-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/GeorgiApostolov/cat-shelter-sep-2025/issues"
+  },
+  "homepage": "https://github.com/GeorgiApostolov/cat-shelter-sep-2025#readme"
+}
