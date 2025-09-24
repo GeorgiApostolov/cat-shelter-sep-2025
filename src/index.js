@@ -16,6 +16,13 @@ async function addBreedView() {
   return html;
 }
 
+async function addCatView() {
+  const html = await fs.readFile("./src/views/addCat.html", {
+    encoding: "utf-8",
+  });
+  return html;
+}
+
 const server = http.createServer(async (req, res) => {
   switch (req.url) {
     case "/":
@@ -48,6 +55,15 @@ const server = http.createServer(async (req, res) => {
       });
 
       res.write(addBreed);
+      break;
+    case "/cats/add-cat":
+      const addCat = await addCatView();
+
+      res.writeHead(200, {
+        "content-type": "text/html",
+      });
+
+      res.write(addCat);
       break;
     default:
       res.end();
