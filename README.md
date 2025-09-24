@@ -12,9 +12,9 @@ JS BACK END COURSE PROJECT
 - [x] Show home page
 - [x] Add css
 - [x] Extract css into separate js files
-- [] Read home html from file system
+- [x] Read home html from file system
 - [] Read site css from file system
-- [] Add create bread page
+- [] Add create breed page
 - [] Add create cat page
 - [] Render view generic function
 - [] Render dynamic cats on home page

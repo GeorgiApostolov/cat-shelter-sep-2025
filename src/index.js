@@ -1,10 +1,13 @@
 import http from "http";
+import fs from "fs/promises";
 
 import siteCss from "./site.css.js";
 
-import homeHtml from "./home.html.js";
+const server = http.createServer(async (req, res) => {
+  const homeHtml = await fs.readFile("./src/views/home/index.html", {
+    encoding: "utf-8",
+  });
 
-const server = http.createServer((req, res) => {
   if (req.url === `/`) {
     res.writeHead(200, {
       "content-type": "text/html",
