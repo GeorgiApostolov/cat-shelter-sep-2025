@@ -2,6 +2,7 @@ import http from "http";
 import fs from "fs/promises";
 
 import cats from "./cats.js";
+import { URLSearchParams } from "url";
 
 async function renderView(path) {
   const html = fs.readFile(path, { encoding: "utf-8" });
@@ -47,6 +48,22 @@ function catTemplate(cat) {
 }
 
 const server = http.createServer(async (req, res) => {
+  if (req.method === `POST`) {
+    console.log(`The method is POST!`);
+    let data = "";
+
+    req.on(`data`, (chunk) => {
+      data += chunk.toString();
+    });
+
+    req.on(`end`, () => {
+      const searchParams = new URLSearchParams(data);
+
+      const newCat = Object.fromEntries(searchParams.entries());
+      cats.push(newCat);
+    });
+  }
+
   switch (req.url) {
     case "/":
       const html = await homeView();
