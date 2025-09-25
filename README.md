@@ -16,7 +16,7 @@ JS BACK END COURSE PROJECT
 - [x] Read site css from file system
 - [x] Add create breed page
 - [x] Add create cat page
-- [] Render view generic function
+- [x] Render view generic function
 - [] Render dynamic cats on home page
 - [] Add cats from add-cats page
 - [] Conditional rendering with cats
