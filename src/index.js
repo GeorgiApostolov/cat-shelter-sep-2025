@@ -1,6 +1,8 @@
 import http from "http";
 import fs from "fs/promises";
 
+import cats from "./cats.js";
+
 async function renderView(path) {
   const html = fs.readFile(path, { encoding: "utf-8" });
   return html;
@@ -8,7 +10,12 @@ async function renderView(path) {
 
 async function homeView() {
   const html = await renderView("./src/views/home/index.html");
-  return html;
+
+  const catHtml = cats.map((cat) => catTemplate(cat)).join(`\n`);
+
+  const result = html.replace("{{cats}}", catHtml);
+
+  return result;
 }
 
 async function addBreedView() {
@@ -19,6 +26,24 @@ async function addBreedView() {
 async function addCatView() {
   const html = await renderView("./src/views/addCat.html");
   return html;
+}
+
+function catTemplate(cat) {
+  return `<li>
+            <img
+              src=${cat.imageUrl}
+              alt=${cat.name}
+            />
+            <h3>${cat.name}</h3>
+            <p><span>Breed: </span>${cat.breed}</p>
+            <p>
+              <span>Description: </span>${cat.description}
+            </p>
+            <ul class="buttons">
+              <li class="btn edit"><a href="">Change Info</a></li>
+              <li class="btn delete"><a href="">New Home</a></li>
+            </ul>
+          </li>`;
 }
 
 const server = http.createServer(async (req, res) => {
