@@ -19,7 +19,7 @@ JS BACK END COURSE PROJECT
 - [x] Render view generic function
 - [x] Render dynamic cats on home page
 - [x] Add cats from add-cats page
-- [] Conditional rendering with cats
+- [x] Conditional rendering with cats
 - [] Redirect to home page
 - [] Add cats persistence
 - [] Cache CSS

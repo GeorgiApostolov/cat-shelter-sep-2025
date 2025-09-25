@@ -11,10 +11,14 @@ async function renderView(path) {
 
 async function homeView() {
   const html = await renderView("./src/views/home/index.html");
+  let catHtml = ``;
+  if (cats.length > 0) {
+    catHtml = cats.map((cat) => catTemplate(cat)).join(`\n`);
+  } else {
+    catHtml = `<span>There are no cats</span>`;
+  }
 
-  const catHtml = cats.map((cat) => catTemplate(cat)).join(`\n`);
-
-  const result = html.replace("{{cats}}", catHtml);
+  const result = html.replaceAll("{{cats}}", catHtml);
 
   return result;
 }
